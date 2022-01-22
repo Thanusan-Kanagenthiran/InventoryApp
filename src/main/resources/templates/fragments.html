@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>list categories page</title>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+</head>
+
+<body class="bg-dark p-2 text-dark bg-opacity-10">
+	<div th:fragment="menu">
+		<div class="py-3 bg-light text-center display-5">
+			TMK inventory management
+		</div>
+	</div>
+
+
+	<div class=" px-5 py-5 justify-content-center">
+		<h1 class="text-center mb-4">brand list</h1>
+		<table class="table ">
+			<thead>
+				<tr>
+					<th> Id</th>
+					<th> Name</th>
+					<th> Categories</th>
+					<th> edit</th>
+					<th> delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<th:block th:each="brand : ${listBrands}">
+					<tr>
+						<td>[[${brand.id}]]</td>
+						<td>[[${brand.name}]]</td>
+						<td>
+							<th:text th:each="categories : ${brand.categories}">
+								<span th:text="${categories}"></span>
+							</th:text>
+						</td>
+						<td>
+							<a th:href="@{'/brands/edit/' + ${brand.id}}"> edit</a>
+						</td>
+						<td>
+							<a th:href="@{'/brands/delete/' + ${brand.id}}"> delete</a>
+						</td>
+					</tr>
+				</th:block>
+			</tbody>
+		</table>
+
+	</div>
+
+</body>
+
+</html>
