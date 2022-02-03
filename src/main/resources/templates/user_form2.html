@@ -8,26 +8,11 @@
 
 </head>
 
-<body class="bg-dark p-2 text-dark bg-opacity-10">
-
-
+<body class="bg-dark text-dark bg-opacity-10 mh-100">
 	<div th:replace="fragments :: menu"></div>
-	<div class="row">
-		<div class="col-3 mt-5 border">
-			<ul class="list-group list-group-flush mt-4 ms-3 px-4">
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/categories}>Categories</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/products}>Products</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/brands}>Brands</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/users}>Users</a>
-				</li>
-			</ul>
+	<div class="row mx-0 h-100">
+		<div class="col-3 pt-5 mt-5 pb-5 border-end border-4 border-dark">
+			<div th:replace="sidemenu :: sidemenu"></div>
 		</div>
 		<div class="col-8 mt-5">
 			<div class="container mt-5 ">

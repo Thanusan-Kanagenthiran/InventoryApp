@@ -3,33 +3,66 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>brands</title>
+	<title>TMK inventory</title>
 	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
 
 </head>
 
 <body class="bg-dark p-2 text-dark bg-opacity-10">
 	<div th:replace="fragments :: menu"></div>
-	<div class="row">
-		<div class="col-3"></div>
+	<div class="row d-flex justify-content-center">
 
-		<div class="col-6 mt-5 border">
-			<ul class="list-group list-group-flush mt-4 ms-3 px-4">
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/categories}>Categories</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/products}>Products</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/brands}>Brands</a>
-				</li>
-				<li class="list-group-item mb-4">
-					<a class="list-group-item " th:href=@{/users}>Users</a>
-				</li>
-			</ul>
+		<div class="col-3 col-md-4 mt-5 border">
+			<div class="card text-center mb-4">
+				<div class="card-header">
+					<ul class="nav card-header-pills">
+						<h5 class="card-title">Categories</h5>
+					</ul>
+				</div>
+				<div class="card-body">
+					<a class="btn btn-dark w-100 px-2 mb-4" th:href=@{/categories}>Categories</a>
+					<a class="btn btn-dark w-100 px-2 " th:href=@{/categories/new}>Categories</a>
+				</div>
+			</div>
+
+			<div class="card text-center">
+				<div class="card-header">
+					<ul class="nav card-header-pills">
+						<h5 class="card-title">Brands</h5>
+					</ul>
+				</div>
+				<div class="card-body">
+					<a class="btn btn-dark w-100 px-2 mb-4" th:href=@{/brands}>Brands</a>
+					<a class="btn btn-dark w-100 px-2 " th:href=@{/brands/new}>Brands</a>
+				</div>
+			</div>
 		</div>
-		<div class="col-3"></div>
+		<div class="col-3 col-md-4 mt-5 border me-3">
+			<div class="card text-center mb-4">
+				<div class="card-header">
+					<ul class="nav card-header-pills">
+						<h5 class="card-title">Products</h5>
+					</ul>
+				</div>
+				<div class="card-body">
+					<a class="btn btn-dark w-100 px-2 mb-4" th:href=@{/products}>Products</a>
+					<a class="btn btn-dark w-100 px-2 " th:href=@{/products/new}>Products</a>
+				</div>
+			</div>
+			<div class="card text-center ">
+				<div class="card-header">
+					<ul class="nav card-header-pills">
+						<h5 class="card-title">Users</h5>
+					</ul>
+				</div>
+				<div class="card-body">
+					<a class="btn btn-dark w-100 px-2 mb-4" th:href=@{/users}>Users</a>
+					<a class="btn btn-dark w-100 px-2 " th:href=@{/users/new}>Users</a>
+				</div>
+			</div>
+
+
+		</div>
 	</div>
 
 
