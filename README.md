@@ -17,6 +17,12 @@ Relationship with entities for now.
   * run the project
   * visit [localhost:8080](http://localhost:8080/)
 
+## There are some relationships created among entities
+## There are mostly CRUD functions
+
+*****************************************************
+
+![alt text](https://github.com/Thanusan-Kanagenthiran/InventoryApp/blob/master/screenshots/ss1.png?raw=true)
+![alt text](https://github.com/Thanusan-Kanagenthiran/InventoryApp/blob/master/screenshots/ss2.png?raw=true)
+![alt text](https://github.com/Thanusan-Kanagenthiran/InventoryApp/blob/master/screenshots/ss3.png?raw=true)
 ![alt text](https://github.com/Thanusan-Kanagenthiran/InventoryApp/blob/master/screenshots/db.png?raw=true)
-
-
